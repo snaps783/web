@@ -1,0 +1,100 @@
+<html>
+
+<head>
+
+  <!-- General Settings -->
+  <meta charset="utf-8">
+  <meta http-equiv="content-language" content="en-us">
+  <base href="{global.baseUrl}" />
+
+  <!-- Meta Tags -->
+  <title>{head.title} | {global.appName}</title>
+  <meta name="description" content="{head.description}">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Static Assets -->
+  <link type="image/x-icon" rel="icon" href="favicon.ico">
+  <script type="text/javascript" charset="utf-8" src="public/app.js"></script>
+  <link rel="stylesheet" type="text/css" href="public/app.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  
+  <script src="public/dist/Chart.js"></script>
+  <script src="public/dist/Chart.min.js"></script>
+  <script src="public/dist/utils.js"></script>
+  
+  <script src="public/js/chart1.js"></script>
+</head>
+
+<body class="{body.class}">
+  <!-- Page Wrapper -->
+  <div class="wrapper">
+    <!-- Header -->
+    <div class="header">
+      <!-- Logo -->
+      <a class="logo" href="/">
+        <!--  <img src="public/logo.png" alt="Logo" />  -->
+      </a>
+      <!-- Navigation -->
+      <ul class="menu">
+        <li>
+          <a href="/">Home</a>
+        </li>
+
+        <li class="loggedIn">
+          <div class="dropdown">
+            <button class="dropbtn">Mining</button>
+            <div class="dropdown-content">
+              <a href="http://127.0.0.1:3000/mining/dbdata">Dashboard</a>
+              <a href="/mining/index?template=index">Mining</a>
+              <a href="#">...</a>
+              <a href="#">....</a>
+            </div>
+          </div>
+        </li>
+
+       
+          <li class="loggedIn">
+            <a href="/mining/index">Mining</a>
+          </li>
+        <li class="loggedOut">
+          <a href="/account/create">Signup</a>
+        </li>
+        <li class="loggedOut">
+          <a href="/session/create">Login</a>
+        </li>
+        <li class="loggedIn">
+          <a href="/checks/all">Dashboard</a>
+        </li>
+        <li class="loggedIn">
+          <a href="/account/edit">Account Settings</a>
+        </li>
+        <!--
+            <li class="loggedIn">
+            <a class="logo" href="/account/edit">
+              <img src="public/settings.png" alt="account settings" />
+            </a>
+            </li>-->
+        <li class="loggedIn">
+          <a href="#" id="logoutButton">Logout</a>
+        </li>
+      </ul>
+      <div class="clear">
+      </div>
+      <span style="font-size:30px;cursor:pointer; padding: 25px;" onclick="openNav()">&#9776;</span>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
+    <!-- Page-Specific Content -->
+    <div id="main">
+      <div class="content">
+      </div>
